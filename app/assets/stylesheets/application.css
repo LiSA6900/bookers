@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top{
+  margin:33px;
+  color:#333;
+}
+
+h1,p{
+  font-family:verdana, arial, helvetica, sans-serif;
+}
+
+h1{
+  font-size:26px;
+  
+}
+
+p{
+  margin:33px;
+  font-size:13px;
+}
+
+a{
+  color:#666;
+}
