@@ -1,4 +1,7 @@
 <body class="index">
+  <!--削除成功時のフラッシュメッセージ-->
+  <p class="notice"><%= flash[:notice] %></p>
+  
   <h1>Books</h1>
   <table>
      <thead>
@@ -24,14 +27,17 @@
 
  <div class="new">
    <h2>New book</h2>
+  <!--バリテーション設定のエラー表示-->
+   <div class="error">
    <% if @book.errors.any? %>
-     <%= @book.errors.count %>errors prohibited this book from being saved:
+     <h2><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
      <ul>
        <% @book.errors.full_messages.each do |message| %>
          <li><%= message %></li>
        <% end %>
      </ul>
     <% end %>
+    </div>
     
    <%= form_with model: @book, url: "/books", method: :post do |f| %>
     <div class="field">

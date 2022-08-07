@@ -25,6 +25,7 @@ body{
   color:#333;
   margin:33px;
   font-size:13px;
+  line-height:18px;
 }
 
 h1{
@@ -60,4 +61,39 @@ h2{
 
 .field-contents{
   margin:0;
+}
+
+.error{
+  display:block;
+  width:450px;
+  border:2px solid red;
+  padding:7px;
+  padding-bottom:0;
+  margin-bottom:20px;
+  background-color: #f0f0f0;
+}
+
+.error h2{
+  text-align: left;
+  font-weight:bold; /* フォントの太さ*/
+  padding:5px 5px 5px 15px;
+  font-size:12px;
+  margin:-7px;
+  margin-bottom:0;
+  background-color:#c00;
+  color:white;
+}
+
+.error li{
+  unicode-bidi: isolate; /*要素のコンテナーの記述方向が要素の内容を考慮せずに計算される*/
+  font-variant-numeric: tabular-nums; /*数字、分数、序数記号の表記を制御するために使用*/
+  text-transform: none; /*テキストにおける英数字の大文字、小文字の表示を指定*/
+  text-indent: 0px !important; /*インデント（字下げ）を行い、（px, %, pt, emなど）で指定*/
+  text-align: start !important;
+  text-align-last: start !important;
+  padding-inline-start: 40px;
+}
+
+.notice{
+  color:green;
 }

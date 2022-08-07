@@ -1,4 +1,7 @@
 <body>
+  <!--投稿編集成功時のフラッシュメッセージ-->
+  <p class="notice"><%= flash[:notice] %></p>
+  
   <p><strong>Title:</strong><%= @book.title %></p>
   <p><strong>Body:</strong><%= @book.body %></p>
   <%= link_to "Edit", "/books/#{@book.id}/edit" %>
